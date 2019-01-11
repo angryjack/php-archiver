@@ -6,17 +6,17 @@
 
 ### Инициализация
 ```php 
-use Angryjack\Archiver;
+use Angryjack\Archiver\Archiver;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $a = new Archiver();
 ```
 
-### Архивирование папки включая саму себя
+### Архивирование файла или папки (включая саму себя)
 ```php 
-$sourcePath = '/path/to/folder'; // путь к папке
-$outZipPath = 'output/folder.zip'; // по какому пути будет находиться архив и его название
+$sourcePath = '/path/to/folder'; // путь к архивируемой папке или файлу
+$outZipPath = 'output/folder.zip'; // название архива и его расположение после создания (папка должна существовать)
 $a->makeArchive($sourcePath, $outZipPath)
 
 ```
